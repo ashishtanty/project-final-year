@@ -47,7 +47,7 @@ def posterior(moments):
     lp = prior(moments)
     if not np.isfinite(lp):
         return -np.inf
-    return lp + log_likelihood(moments, sigma)
+    return lp + log_likelihood(moments)
 
 n_iter = 10000
 current = np.random.uniform(4, 8, 9)
